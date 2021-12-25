@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html>
+     
+    <head>
+        
+        <meta charset="UTF-8">
+        <title>freshmart</title>
+    <center><h1>WELCOME TO FRESHMART</h1></center>
+        <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+        <link rel="stylesheet" href="<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+             
+              
+                <style>
+                    .dropbtn{
+                        background-color: #4CAF50;
+                        color: white;
+                        padding: 20px;
+                        font-size: 20px;
+                        border: none;
+                    }
+                    .dropdown{
+                        position: relative;
+                        display: inline-block;
+                        
+                    }
+                    .dropdown-content{
+                        display: none;
+                        position: absolute;
+                        background-color: #f1f1f1;
+                        min-width: 160px;
+                        box-shadow: 0px 8px 16px 0px
+                            rgba(0,0,0,0,2);
+                        z-index: 1;
+                    }
+                    .dropdown-content a{
+                        color: black;
+                        text-decoration:none;
+                        display: block;
+                    }
+                    
+                    .dropdown-content a:hover{background-color: #ddd;}
+                    .dropdown:hover .dropdown-content{display: block;}
+                    .dropdown:hover .dropbtn{background-color: #3e8e41;}
+                  
+            body{
+                background-repeat: no-repeat;
+             
+                background-position: center;
+                background-size:1500px;
+      
+                background-image: url("lab2.jpg");
+            }
+        </style>
+        <h2>LOGIN HERE</h2>
+        <div class="dropdown">
+            <button text="Login"
+                class="dropbtn">LOGIN</button>
+                <div class="dropdown-content" text="login">
+                    <a href="login/login.php">CUSTOMER LOGIN</a>
+                     <a href="login/login_owner.php">MANAGER LOGIN</a>
+                      <a href="salesclerk.jsp">SALESCLERK</a>
+                      <a href="employe.jsp">EMPLOYEE</a>
+                </div>
+        
+        </div>
+        <div class="container">
+            <nav>
+                <ul>
+                    <b><h3>REGISTER HERE</h3></b>
+                    <b><li style="float: left ; color: black"><a href="register/register.php">REGISTER</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li></b>
+                    
+                  
+                    
+                  
+                </ul>
+            </nav>
+            
+        </div>
+       
+    </head>
+    <div align="center"id="kk">
+                <div id="main">
+
+<a href="supermarcket.jsp" >HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="ABOUT US.jsp" >ABOUT US</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="help.jsp" >HELP</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="feedback.jsp" >FEEDBACK</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</div><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<h3 align="right" style="color:black;font-family:Droid Serif;">Created by ......<br/></h3>
+<br/><br/>
+
+
+    
+ 
+</html>

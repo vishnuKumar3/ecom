@@ -1,0 +1,34 @@
+<!doctype html>
+<style>#box{margin-top:10%;border:1px solid transparent;} #td{width:100px;height:30px;} body{text-align:center;}</style>
+<center><h1>BILL</h1></center>
+
+<center><table id="box">
+<?php
+$host="localhost";
+$username="root";
+$password="";
+$db="trail";
+$total_bill=0;
+$conn=new mysqli($host,$username,$password,$db);
+$result=$conn->query("select * from trailtable4");
+	echo "<tr>
+		<td id='td'><b>product</b></td>
+		<td id='td'><b>price</b></td>
+		<td id='td'><b>quantity</b></td>
+		</tr>";
+while($r=$result->fetch_assoc()){
+	$product=$r['product'];
+	$price=$r['price'];
+	$quantity=$r['quantity'];
+	$total_bill+=$price*$quantity;
+	echo "<tr>
+		<td id='td'>$product</td>
+		<td id='td'>$ $price</td>
+		<td id='td'>$quantity</td>
+		</tr>";
+	}
+echo "<tr><td id='td' colspan='3'><h3>Total Bill:-$ $total_bill</h3></td></tr>";
+$conn->query("delete from trailtable4");
+?>
+</table></center>
+

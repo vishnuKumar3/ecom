@@ -1,0 +1,36 @@
+<!doctype html>
+<style>body{text-align:center;}</style>
+<center><h1>PRICE</h1></center>
+
+<div style="margin-top:10%;">
+<?php
+session_start();
+if($_SERVER['REQUEST_METHOD']=="POST" && isset($_POST['products'])){
+$_SESSION['product']=$_POST['product'];
+$_SESSION['price']=$_POST['price'];}
+$product=$_SESSION['product'];
+$price=$_SESSION['price'];
+echo "<p>Product Name:$product</p>
+	<p>Product Price:$ $price</p>";
+?>
+<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+Quantity:<input type="text" name='quantity' />
+<input type="submit" value="submit" name='quantity_product'/>
+</form>
+</div>
+
+<?php
+if($_SERVER['REQUEST_METHOD']=="POST" && isset($_POST['quantity_product']) ){
+$quantity=$_POST['quantity'];
+$host="localhost";
+$username="root";
+$password="";
+$db="trail";
+$conn=new mysqli($host,$username,$password,$db);
+$result=$conn->prepare("insert into trailtable4 (product,price,quantity) values(?,?,?)");
+$result->bind_param("sii",$product,$price,$quantity);
+$result->execute();
+$result->close();
+header("Location:../products/products.php");
+}
+?>
